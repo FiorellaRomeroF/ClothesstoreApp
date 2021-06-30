@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/*Navbar*/
+.navbar-items {
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 80px;
+}
+
+.navbar-logo {
+  color: black;
+  font-size: 40px;
+  font-weight: 900;
+  justify-self: start;
+  margin-left: 1em;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  justify-content: end;
+  width: 67vw;
+}
+
+.search {
+  position: relative;
+  top: 6px;
+  width: 380px;
+  height: 30px;
+  border: 1px solid #e6e6e6;
+  background: #e6e6e6;
+}
+
+.search-position {
+  position: relative;
+  top: 5px;
+}
+
+.icon-position {
+  margin-inline: 10px;
+}
+
+.button {
+  height: 35px;
+  width: 110px;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
+  background: white;
+}
+
+.button:hover {
+  background-color: #e6e6e6;
+}
+
+/*Nav*/
+.nav-items {
+  background: black;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  overflow: hidden;
+}
+
+.nav-link-mobile {
+  position: relative;
+  top: 6px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 40px;
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+  top: 6px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 40px;
+  list-style: none;
+}
+
+.men,
+.women,
+.junior,
+.kids,
+.accessories,
+.oferts {
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.men:hover,
+.women:hover,
+.junior:hover,
+.kids:hover,
+.accessories:hover,
+.oferts:hover {
+  color: #e6e6e6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*Responsive navbars*/
+.menu-icon {
+  display: none;
+}
+
+/*Responsive footer*/
+.more-icon {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  /*Navbar y Nav*/
+  .navbar-items {
+    background: white;
+    height: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-logo {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: -2.5rem;
+  }
+
+  .button,
+  .person {
+    display: none;
+  }
+
+  .shopping {
+    display: flex;
+    position: relative;
+    top: -35px;
+    left: 90px;
+  }
+
+  .nav-search {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    left: 140px;
+  }
+
+  .search-position {
+    position: relative;
+    top: 6px;
+  }
+
+  .search {
+    width: 420px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-link-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: white;
+    left: 0;
+    top: 60px;
+    padding: 30px;
+    transition: all 0.5s ease-out;
+    width: 50%;
+    height: 100%;
+    line-height: 45px;
+  }
+
+  .men,
+  .women,
+  .junior,
+  .kids,
+  .accessories,
+  .oferts {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .nav-items {
+    background: black;
+    height: 0px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    outline: none;
+    top: 10px;
+    right: 88%;
+  }
+
+  /*Footer*/
+  .more-icon {
+    display: block;
+  }
+
+  .list-unstyled {
+    display: none;
   }
 }
